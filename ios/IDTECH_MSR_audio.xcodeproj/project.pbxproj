@@ -1,0 +1,317 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CE91326D1EDF284800ECA08E /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE91326C1EDF284800ECA08E /* MediaPlayer.framework */; };
+		CE91326F1EDF285E00ECA08E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE91326E1EDF285E00ECA08E /* AudioToolbox.framework */; };
+		CE9132711EDF286300ECA08E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9132701EDF286300ECA08E /* AVFoundation.framework */; };
+		CE9132731EDF286F00ECA08E /* IDTECH_UniMag.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9132721EDF286F00ECA08E /* IDTECH_UniMag.a */; };
+		CE9132761EDF4E1800ECA08E /* utils.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9132751EDF4E1800ECA08E /* utils.m */; };
+		CEF167CB1EDF243B00907A04 /* IdTechUniMag.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF167CA1EDF243B00907A04 /* IdTechUniMag.m */; };
+		CEF167CF1EDF244C00907A04 /* UMCardData.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF167CD1EDF244B00907A04 /* UMCardData.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CEAD77561EDF23B000FE9280 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		CE91326C1EDF284800ECA08E /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		CE91326E1EDF285E00ECA08E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		CE9132701EDF286300ECA08E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		CE9132721EDF286F00ECA08E /* IDTECH_UniMag.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = IDTECH_UniMag.a; path = "uniMag-SDK/IDTECH_UniMag.a"; sourceTree = "<group>"; };
+		CE9132741EDF4E1800ECA08E /* utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utils.h; sourceTree = "<group>"; };
+		CE9132751EDF4E1800ECA08E /* utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = utils.m; sourceTree = "<group>"; };
+		CEAD77581EDF23B000FE9280 /* libIDTECH_MSR_audio.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libIDTECH_MSR_audio.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEF167C91EDF243B00907A04 /* IdTechUniMag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IdTechUniMag.h; sourceTree = "<group>"; };
+		CEF167CA1EDF243B00907A04 /* IdTechUniMag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IdTechUniMag.m; sourceTree = "<group>"; };
+		CEF167CC1EDF244B00907A04 /* UMCardData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UMCardData.h; path = "uniMag-SDK/UMCardData.h"; sourceTree = SOURCE_ROOT; };
+		CEF167CD1EDF244B00907A04 /* UMCardData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UMCardData.m; path = "uniMag-SDK/UMCardData.m"; sourceTree = SOURCE_ROOT; };
+		CEF167CE1EDF244C00907A04 /* uniMag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = uniMag.h; path = "uniMag-SDK/uniMag.h"; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CEAD77551EDF23B000FE9280 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE9132731EDF286F00ECA08E /* IDTECH_UniMag.a in Frameworks */,
+				CE9132711EDF286300ECA08E /* AVFoundation.framework in Frameworks */,
+				CE91326F1EDF285E00ECA08E /* AudioToolbox.framework in Frameworks */,
+				CE91326D1EDF284800ECA08E /* MediaPlayer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CE91326B1EDF284800ECA08E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE9132721EDF286F00ECA08E /* IDTECH_UniMag.a */,
+				CE9132701EDF286300ECA08E /* AVFoundation.framework */,
+				CE91326E1EDF285E00ECA08E /* AudioToolbox.framework */,
+				CE91326C1EDF284800ECA08E /* MediaPlayer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CEAD774F1EDF23B000FE9280 = {
+			isa = PBXGroup;
+			children = (
+				CEAD775A1EDF23B000FE9280 /* IDTECH_MSR_audio */,
+				CEAD77591EDF23B000FE9280 /* Products */,
+				CE91326B1EDF284800ECA08E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CEAD77591EDF23B000FE9280 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CEAD77581EDF23B000FE9280 /* libIDTECH_MSR_audio.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CEAD775A1EDF23B000FE9280 /* IDTECH_MSR_audio */ = {
+			isa = PBXGroup;
+			children = (
+				CE9132741EDF4E1800ECA08E /* utils.h */,
+				CE9132751EDF4E1800ECA08E /* utils.m */,
+				CEF167CC1EDF244B00907A04 /* UMCardData.h */,
+				CEF167CD1EDF244B00907A04 /* UMCardData.m */,
+				CEF167CE1EDF244C00907A04 /* uniMag.h */,
+				CEF167C91EDF243B00907A04 /* IdTechUniMag.h */,
+				CEF167CA1EDF243B00907A04 /* IdTechUniMag.m */,
+			);
+			path = IDTECH_MSR_audio;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CEAD77571EDF23B000FE9280 /* IDTECH_MSR_audio */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEAD77611EDF23B000FE9280 /* Build configuration list for PBXNativeTarget "IDTECH_MSR_audio" */;
+			buildPhases = (
+				CEAD77541EDF23B000FE9280 /* Sources */,
+				CEAD77551EDF23B000FE9280 /* Frameworks */,
+				CEAD77561EDF23B000FE9280 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IDTECH_MSR_audio;
+			productName = IDTECH_MSR_audio;
+			productReference = CEAD77581EDF23B000FE9280 /* libIDTECH_MSR_audio.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CEAD77501EDF23B000FE9280 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = OnceThere;
+				TargetAttributes = {
+					CEAD77571EDF23B000FE9280 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = CEAD77531EDF23B000FE9280 /* Build configuration list for PBXProject "IDTECH_MSR_audio" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CEAD774F1EDF23B000FE9280;
+			productRefGroup = CEAD77591EDF23B000FE9280 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CEAD77571EDF23B000FE9280 /* IDTECH_MSR_audio */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CEAD77541EDF23B000FE9280 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE9132761EDF4E1800ECA08E /* utils.m in Sources */,
+				CEF167CB1EDF243B00907A04 /* IdTechUniMag.m in Sources */,
+				CEF167CF1EDF244C00907A04 /* UMCardData.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		CEAD775F1EDF23B000FE9280 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CEAD77601EDF23B000FE9280 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CEAD77621EDF23B000FE9280 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../node_modules/react-native/React/**",
+					"$(SRCROOT)/../../react-native/React/**",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/uniMag-SDK",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		CEAD77631EDF23B000FE9280 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../node_modules/react-native/React/**",
+					"$(SRCROOT)/../../react-native/React/**",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/uniMag-SDK",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CEAD77531EDF23B000FE9280 /* Build configuration list for PBXProject "IDTECH_MSR_audio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEAD775F1EDF23B000FE9280 /* Debug */,
+				CEAD77601EDF23B000FE9280 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEAD77611EDF23B000FE9280 /* Build configuration list for PBXNativeTarget "IDTECH_MSR_audio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEAD77621EDF23B000FE9280 /* Debug */,
+				CEAD77631EDF23B000FE9280 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CEAD77501EDF23B000FE9280 /* Project object */;
+}

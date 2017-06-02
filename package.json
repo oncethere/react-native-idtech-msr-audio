@@ -1,0 +1,14 @@
+{
+  "name": "react-native-idtech-msr-audio",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "Peace Chen",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start"
+  },
+  "dependencies": {
+    "react": "15.3.2",
+    "react-native": "0.34.1"
+  }
+}

@@ -1,0 +1,5 @@
+UniMag SDK 7.20
+
+For UniMag Original, Pro, II, and Shuttle MSR audio jack readers
+
+From 80110802-025 UniMag II iOS SDK IDTech v7.20 A 040516.zip
