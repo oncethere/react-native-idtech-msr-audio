@@ -1,4 +1,4 @@
-/* Copyright 2010-2014 ID TECH. All rights reserved.
+/* Copyright 2010-2016 ID TECH. All rights reserved.
 */
 
 #import <Foundation/Foundation.h>

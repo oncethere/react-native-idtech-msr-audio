@@ -22,11 +22,11 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
-		7B1E1302B7374CE4983B7D91 /* libIDTECH_MSR_audio.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C9ACA5510ADB41CDAE01736A /* libIDTECH_MSR_audio.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		CEDAE12C1EE0794300D3C184 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDAE12B1EE0794300D3C184 /* MediaPlayer.framework */; };
 		CEDAE12E1EE0794800D3C184 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDAE12D1EE0794800D3C184 /* AudioToolbox.framework */; };
 		CEDAE1301EE0795D00D3C184 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDAE12F1EE0795D00D3C184 /* AVFoundation.framework */; };
+		EF7BA49B17EC4200B807E308 /* libIDTECH_MSR_audio.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EFA742F3A4B348D79D1B9C32 /* libIDTECH_MSR_audio.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,9 +107,9 @@
 			remoteGlobalIDString = 58B5119B1A9E6C1200147676;
 			remoteInfo = RCTText;
 		};
-		CEDAE11C1EE0752300D3C184 /* PBXContainerItemProxy */ = {
+		CE3F88EE1EF860D300620913 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 08C7E0FF4F5C4966BD89E20E /* IDTECH_MSR_audio.xcodeproj */;
+			containerPortal = DA2B7F7320E441A5B4AE44A4 /* IDTECH_MSR_audio.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = CEAD77581EDF23B000FE9280;
 			remoteInfo = IDTECH_MSR_audio;
@@ -126,7 +126,6 @@
 		00E356EE1AD99517003FC87E /* MSRExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MSRExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* MSRExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSRExampleTests.m; sourceTree = "<group>"; };
-		08C7E0FF4F5C4966BD89E20E /* IDTECH_MSR_audio.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = IDTECH_MSR_audio.xcodeproj; path = "../node_modules/react-native-idtech-msr-audio/ios/IDTECH_MSR_audio.xcodeproj"; sourceTree = "<group>"; };
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
 		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* MSRExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MSRExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,10 +138,11 @@
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
-		C9ACA5510ADB41CDAE01736A /* libIDTECH_MSR_audio.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libIDTECH_MSR_audio.a; sourceTree = "<group>"; };
 		CEDAE12B1EE0794300D3C184 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		CEDAE12D1EE0794800D3C184 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		CEDAE12F1EE0795D00D3C184 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		DA2B7F7320E441A5B4AE44A4 /* IDTECH_MSR_audio.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = IDTECH_MSR_audio.xcodeproj; path = "../node_modules/react-native-idtech-msr-audio/ios/IDTECH_MSR_audio.xcodeproj"; sourceTree = "<group>"; };
+		EFA742F3A4B348D79D1B9C32 /* libIDTECH_MSR_audio.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libIDTECH_MSR_audio.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,7 +171,7 @@
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
-				7B1E1302B7374CE4983B7D91 /* libIDTECH_MSR_audio.a in Frameworks */,
+				EF7BA49B17EC4200B807E308 /* libIDTECH_MSR_audio.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,7 +294,7 @@
 				832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */,
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
-				08C7E0FF4F5C4966BD89E20E /* IDTECH_MSR_audio.xcodeproj */,
+				DA2B7F7320E441A5B4AE44A4 /* IDTECH_MSR_audio.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -329,10 +329,10 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CEDAE1191EE0752300D3C184 /* Products */ = {
+		CE3F88EB1EF860D200620913 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CEDAE11D1EE0752300D3C184 /* libIDTECH_MSR_audio.a */,
+				CE3F88EF1EF860D300620913 /* libIDTECH_MSR_audio.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -417,8 +417,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = CEDAE1191EE0752300D3C184 /* Products */;
-					ProjectRef = 08C7E0FF4F5C4966BD89E20E /* IDTECH_MSR_audio.xcodeproj */;
+					ProductGroup = CE3F88EB1EF860D200620913 /* Products */;
+					ProjectRef = DA2B7F7320E441A5B4AE44A4 /* IDTECH_MSR_audio.xcodeproj */;
 				},
 				{
 					ProductGroup = 00C302A81ABCB8CE00DB3ED1 /* Products */;
@@ -540,11 +540,11 @@
 			remoteRef = 832341B41AAA6A8300B99B32 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		CEDAE11D1EE0752300D3C184 /* libIDTECH_MSR_audio.a */ = {
+		CE3F88EF1EF860D300620913 /* libIDTECH_MSR_audio.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libIDTECH_MSR_audio.a;
-			remoteRef = CEDAE11C1EE0752300D3C184 /* PBXContainerItemProxy */;
+			remoteRef = CE3F88EE1EF860D300620913 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
