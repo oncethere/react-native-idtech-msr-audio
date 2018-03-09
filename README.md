@@ -2,14 +2,62 @@
 
 This is a React Native library that wraps the [ID Tech MSR audio](http://www.idtechproducts.com/products/mobile-readers/msr-only) [native library](https://atlassian.idtechproducts.com/confluence/display/KB/Shuttle+-+downloads) for communicating with the UniMag I/II/Pro and Shuttle readers.
 
-The initial release supports iOS only.  Android support is TBD.  Pull requests are welcome.
+iOS and Android are supported.
 
-## Usage
+## Installation
 
 *   `npm install https://github.com/oncethere/react-native-idtech-msr-audio --save`
 *   `react-native link`
+
+### iOS setup
 *   Add _AVFoundation_, _AudioToolbox_, _MediaPlayer_ frameworks to the project (Build Phases -> Link Binary With Libraries)
 *   Add the `NSMicrophoneUsageDescription` permission to the Info.plist.
+
+### Android setup
+*   Check whether `react-native-link` performed the configuration correctly...
+*   Add the necessary permissions to `AndroidManifest.xml` :
+```
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+<uses-permission android:name="android.permission.RECORD_AUDIO"/>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+<uses-permission android:name="android.permission.INTERNET"/>
+```
+*   Add to `android/settings.gradle` if `react-native link` didn't:
+```
+include ':react-native-idtech-msr-audio'
+project(':react-native-idtech-msr-audio').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-idtech-msr-audio/android')
+```
+*   Add to `android/app/build.gradle` :
+```
+dependencies {
+  compile project(':react-native-idtech-msr-audio')
+}
+```
+*   Add to `MainApplication.java` :
+```
+  import com.oncethere.idtechmsraudio.IDTechMSRAudioPackage;
+  // ...
+
+  public class MainApplication extends Application implements ReactApplication {
+
+    private final ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {
+
+      // ...
+
+      @Override
+      protected List<ReactPackage> getPackages() {
+        return Arrays.<ReactPackage>asList(
+            new MainReactPackage(),
+              new IDTechMSRAudioPackage(),
+              // ...
+        );
+      }
+    }
+  }
+```
+
+### React Native JS usage
 *   Import the module in a RN app:
 `import IDTECH_MSR_audio from 'react-native-idtech-msr-audio';`
 *   Platform-specific dependencies are listed under the Example section.
@@ -20,7 +68,7 @@ All available methods are promise-based:
 
 *   `activate(readerType, swipeTimeout, logging)` -- Start a connection to the card reader. Parameters:
    *   _readerType_: UniMag1 = 1, UniMagPro = 2, UniMag2 = 3, Shuttle = 4.
-   *   _swipeTimeout_: Sets wipe to timeout after n seconds. 0 waits indefinitely.
+   *   _swipeTimeout_: Set swipe to timeout after n seconds. 0 waits indefinitely.
    *   _logging_: (bool) Enables info level NSLogs inside SDK.
 *   `deactivate()` -- End connection to the card reader.
 *   `swipe()` -- Begin listening for a swipe. Register for events to receive the card swipe data.
@@ -84,5 +132,5 @@ The `MSRExample/` directory has a sample project using the IDTECH_MSR_audio libr
 *   ...
 
 ## ToDo
-*   Android support
+*   Update MSRExample with Android lib
 *   Tests
