@@ -33,6 +33,8 @@ public class IDTechMSRAudioModule extends ReactContextBaseJavaModule implements 
 
   private uniMagReader _uniMagReader = null;
   private ReactApplicationContext _reactContext = null;
+  private AutoConfigProfile autoConfigProfile = new AutoConfigProfile();
+
 
   public IDTechMSRAudioModule(ReactApplicationContext reactContext) {
     super(reactContext);
@@ -80,19 +82,22 @@ public class IDTechMSRAudioModule extends ReactContextBaseJavaModule implements 
       _uniMagReader.setTimeoutOfSwipeCard(swipeTimeout == 0 ? Integer.MAX_VALUE : swipeTimeout);
       _uniMagReader.setVerboseLoggingEnable(logging);
 
-      boolean isConfigFileLoaded = true;
-      _uniMagReader.setXMLFileNameWithPath("/sdcard/IDT_uniMagCfg.xml");
-      if (!_uniMagReader.loadingConfigurationXMLFile(true)) {
-        _uniMagReader.setXMLFileNameWithPath("/sdcard/AutoConfig.data");
-        if (!_uniMagReader.loadingConfigurationXMLFile(true)) {
-          isConfigFileLoaded = false;
-          message = "Starting auto config.";
-          _uniMagReader.startAutoConfig(true);
-        }
+      StructConfigParameters acProfile = autoConfigProfile.loadAutoConfigProfile(_reactContext);
+
+      if (acProfile != null) {
+        _uniMagReader.connectWithProfile(acProfile);
+        message = "Found existing auto config profile.";
       }
-      if (isConfigFileLoaded) {
-        message = "Found existing config file.";
-        _uniMagReader.connect();
+      else {
+        message = "Starting auto config.";
+        _uniMagReader.startAutoConfig(true);
+
+        // ID Tech's device profile table is too limited for production use.
+        // _uniMagReader.setXMLFileNameWithPath("/sdcard/IDT_uniMagCfg.xml");
+        // if (_uniMagReader.loadingConfigurationXMLFile(true)) {
+        //   message = "Found existing config file.";
+        //   _uniMagReader.connect();
+        // }
       }
     }
     else {
@@ -143,6 +148,7 @@ public class IDTechMSRAudioModule extends ReactContextBaseJavaModule implements 
 
 
   // ---------------------------------------------------------------------------
+  // Helper methods
   private void sendEvent(String eventName,
                          @Nullable WritableMap params) {
     _reactContext
@@ -258,6 +264,13 @@ public class IDTechMSRAudioModule extends ReactContextBaseJavaModule implements 
   }
 
   public void onReceiveMsgAutoConfigCompleted(StructConfigParameters profile) {
+    if (!autoConfigProfile.saveAutoConfigProfile(profile, _reactContext)) {
+      WritableMap saveResult = Arguments.createMap();
+      saveResult.putString("type", "umAutoconfig_save_failed");
+      saveResult.putString("message", "Failed to save auto config profile.");
+      sendEvent("IdTechUniMagEvent", saveResult);
+    }
+
     WritableMap result = Arguments.createMap();
     result.putString("type", "umAutoconfig_complete");
     result.putString("message", "Completed autoconfig. Connecting to reader.");

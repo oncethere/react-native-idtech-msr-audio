@@ -57,6 +57,9 @@ dependencies {
   }
 ```
 
+*   The preset XML table fetched by the ID Tech library offers limited device support.  That is not robust enough for production use, so auto config is leveraged instead.  The first time detection will take some time, but subsequent connections use the cached profile which is fast.
+
+
 ### React Native JS usage
 *   Import the module in a RN app:
 `import IDTECH_MSR_audio from 'react-native-idtech-msr-audio';`
