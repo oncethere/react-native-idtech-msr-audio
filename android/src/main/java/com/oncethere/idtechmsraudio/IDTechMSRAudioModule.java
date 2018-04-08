@@ -85,6 +85,7 @@ public class IDTechMSRAudioModule extends ReactContextBaseJavaModule implements 
       StructConfigParameters acProfile = autoConfigProfile.loadAutoConfigProfile(_reactContext);
 
       if (acProfile != null) {
+        sendEvent("IdTechUniMagEvent", autoConfigProfile.toWritableMap(acProfile));
         _uniMagReader.connectWithProfile(acProfile);
         message = "Found existing auto config profile.";
       }
@@ -271,6 +272,7 @@ public class IDTechMSRAudioModule extends ReactContextBaseJavaModule implements 
       sendEvent("IdTechUniMagEvent", saveResult);
     }
 
+    sendEvent("IdTechUniMagEvent", autoConfigProfile.toWritableMap(profile));
     WritableMap result = Arguments.createMap();
     result.putString("type", "umAutoconfig_complete");
     result.putString("message", "Completed autoconfig. Connecting to reader.");

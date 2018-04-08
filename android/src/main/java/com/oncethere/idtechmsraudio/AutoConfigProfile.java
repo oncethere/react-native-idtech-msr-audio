@@ -9,6 +9,8 @@ package com.oncethere.idtechmsraudio;
 
 import IDTech.MSR.XMLManager.StructConfigParameters;
 import com.facebook.react.bridge.ReactApplicationContext;
+import com.facebook.react.bridge.WritableMap;
+import com.facebook.react.bridge.Arguments;
 
 import java.io.Serializable;
 import android.content.Context;
@@ -107,5 +109,29 @@ public class AutoConfigProfile implements Serializable {
     }
 
     return null;
+  }
+
+  public WritableMap toWritableMap(StructConfigParameters profile) {
+    WritableMap result = Arguments.createMap();
+    result.putString("type", "umAutoConfigProfile");
+    result.putString("message", "auto config profile");
+
+    result.putInt("DirectionOutputWave", profile.getDirectionOutputWave());
+    result.putInt("FrequencyInput", profile.getFrequenceInput());
+    result.putInt("FrequencyOutput", profile.getFrequenceOutput());
+    result.putInt("RecordBufferSize", profile.getRecordBufferSize());
+    result.putInt("RecordReadBufferSize", profile.getRecordReadBufferSize());
+    result.putInt("WaveDirection", profile.getWaveDirection());
+    result.putInt("HighThreshold", profile.gethighThreshold());
+    result.putInt("LowThreshold", profile.getlowThreshold());
+    result.putInt("Min", profile.getMin());
+    result.putInt("Max", profile.getMax());
+    result.putInt("BaudRate", profile.getBaudRate());
+    result.putInt("PreambleFactor", profile.getPreAmbleFactor());
+    result.putInt("ShuttleChannel", profile.getShuttleChannel());
+    result.putInt("ForceHeadsetPlug", profile.getForceHeadsetPlug());
+    result.putInt("UseVoiceRecognition", profile.getUseVoiceRecognition());
+    result.putInt("VolumeLevelAdjust", profile.getVolumeLevelAdjust());
+    return result;
   }
 }
