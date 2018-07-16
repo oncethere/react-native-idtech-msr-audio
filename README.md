@@ -19,10 +19,11 @@ iOS and Android are supported.
 ```
 <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
 <uses-permission android:name="android.permission.RECORD_AUDIO"/>
-<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 <uses-permission android:name="android.permission.INTERNET"/>
 ```
+Note that for Android M and later, you may need to check for permissions at runtime and prompt the user with the [PermissionsAndroid API](https://facebook.github.io/react-native/docs/permissionsandroid.html).
+
 *   Add to `android/settings.gradle` if `react-native link` didn't:
 ```
 include ':react-native-idtech-msr-audio'
