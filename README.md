@@ -86,18 +86,8 @@ Events are emitted by NativeEventEmitter under the name `IdTechUniMagEvent`. Upo
 import IDTECH_MSR_audio from 'react-native-idtech-msr-audio';
 import { NativeModules, NativeEventEmitter } from 'react-native';
 
-// Connect to the card reader.
-IDTECH_MSR_audio.activate({
-  readerType: 4, //Shuttle
-  swipeTimeout: 0, // wait indefinitely for swipe
-  logging: false
-}).then(
-  (response) =>{
-    console.log("IDTECH_MSR_audio activation response:" + JSON.stringify(response));
-});
-
-componentWillMount() {
-  // Listen for events from the card reader.
+componentDidMount() {
+  // First subscribe to events from the card reader.
   const IdTechUniMagEvent = new NativeEventEmitter(NativeModules.IDTECH_MSR_audio);
   this.IdTechUniMagEventSub = IdTechUniMagEvent.addListener(
     'IdTechUniMagEvent',
@@ -112,10 +102,22 @@ componentWillMount() {
       console.log("IDTECH_MSR_audio event notification: " + JSON.stringify(response));
     }
   );
+
+  // Then connect to the card reader.
+  IDTECH_MSR_audio.activate({
+    readerType: 4, //Shuttle
+    swipeTimeout: 0, // wait indefinitely for swipe
+    logging: false
+  }).then(
+    (response) =>{
+      console.log("IDTECH_MSR_audio activation response:" + JSON.stringify(response));
+  });
 }
 
 componentWillUnmount() {
+  // Both of these calls are necessary to disconnect from the IDTech library.
   this.IdTechUniMagEventSub.remove();
+  IDTECH_MSR_audio.deactivate();
 }
 ```
 
