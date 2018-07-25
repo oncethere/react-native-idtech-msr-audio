@@ -71,9 +71,9 @@ dependencies {
 All available methods are promise-based:
 
 *   `activate(readerType, swipeTimeout, logging)` -- Start a connection to the card reader. Parameters:
-   *   _readerType_: UniMag1 = 1, UniMagPro = 2, UniMag2 = 3, Shuttle = 4.
-   *   _swipeTimeout_: Set swipe to timeout after n seconds. 0 waits indefinitely.
-   *   _logging_: (bool) Enables info level NSLogs inside SDK.
+    *   _readerType_: UniMag1 = 1, UniMagPro = 2, UniMag2 = 3, Shuttle = 4.
+    *   _swipeTimeout_: Set swipe to timeout after n seconds. 0 waits indefinitely.
+    *   _logging_: (bool) Enables info level NSLogs inside SDK.
 *   `deactivate()` -- End connection to the card reader.
 *   `swipe()` -- Begin listening for a swipe. Register for events to receive the card swipe data.
 
