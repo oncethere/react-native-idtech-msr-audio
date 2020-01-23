@@ -10,10 +10,10 @@
 		CE91326D1EDF284800ECA08E /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE91326C1EDF284800ECA08E /* MediaPlayer.framework */; };
 		CE91326F1EDF285E00ECA08E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE91326E1EDF285E00ECA08E /* AudioToolbox.framework */; };
 		CE9132711EDF286300ECA08E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9132701EDF286300ECA08E /* AVFoundation.framework */; };
-		CE9132731EDF286F00ECA08E /* IDTECH_UniMag.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9132721EDF286F00ECA08E /* IDTECH_UniMag.a */; };
 		CE9132761EDF4E1800ECA08E /* utils.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9132751EDF4E1800ECA08E /* utils.m */; };
 		CEF167CB1EDF243B00907A04 /* IdTechUniMag.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF167CA1EDF243B00907A04 /* IdTechUniMag.m */; };
 		CEF167CF1EDF244C00907A04 /* UMCardData.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF167CD1EDF244B00907A04 /* UMCardData.m */; };
+		FA53184C23D8C9C000AB5D2B /* libIDTECH_UniMag.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA53184B23D8C9C000AB5D2B /* libIDTECH_UniMag.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,7 +32,6 @@
 		CE91326C1EDF284800ECA08E /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		CE91326E1EDF285E00ECA08E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		CE9132701EDF286300ECA08E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		CE9132721EDF286F00ECA08E /* IDTECH_UniMag.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = IDTECH_UniMag.a; path = "uniMag-SDK/IDTECH_UniMag.a"; sourceTree = "<group>"; };
 		CE9132741EDF4E1800ECA08E /* utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utils.h; sourceTree = "<group>"; };
 		CE9132751EDF4E1800ECA08E /* utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = utils.m; sourceTree = "<group>"; };
 		CEAD77581EDF23B000FE9280 /* libIDTECH_MSR_audio.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libIDTECH_MSR_audio.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,6 +40,7 @@
 		CEF167CC1EDF244B00907A04 /* UMCardData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UMCardData.h; path = "uniMag-SDK/UMCardData.h"; sourceTree = SOURCE_ROOT; };
 		CEF167CD1EDF244B00907A04 /* UMCardData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UMCardData.m; path = "uniMag-SDK/UMCardData.m"; sourceTree = SOURCE_ROOT; };
 		CEF167CE1EDF244C00907A04 /* uniMag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = uniMag.h; path = "uniMag-SDK/uniMag.h"; sourceTree = SOURCE_ROOT; };
+		FA53184B23D8C9C000AB5D2B /* libIDTECH_UniMag.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libIDTECH_UniMag.a; path = "uniMag-SDK/libIDTECH_UniMag.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE9132731EDF286F00ECA08E /* IDTECH_UniMag.a in Frameworks */,
+				FA53184C23D8C9C000AB5D2B /* libIDTECH_UniMag.a in Frameworks */,
 				CE9132711EDF286300ECA08E /* AVFoundation.framework in Frameworks */,
 				CE91326F1EDF285E00ECA08E /* AudioToolbox.framework in Frameworks */,
 				CE91326D1EDF284800ECA08E /* MediaPlayer.framework in Frameworks */,
@@ -61,7 +61,7 @@
 		CE91326B1EDF284800ECA08E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CE9132721EDF286F00ECA08E /* IDTECH_UniMag.a */,
+				FA53184B23D8C9C000AB5D2B /* libIDTECH_UniMag.a */,
 				CE9132701EDF286300ECA08E /* AVFoundation.framework */,
 				CE91326E1EDF285E00ECA08E /* AudioToolbox.framework */,
 				CE91326C1EDF284800ECA08E /* MediaPlayer.framework */,
@@ -260,7 +260,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
-					"$(SRCROOT)/../node_modules/react-native/React/**",
+					"$(SRCROOT)/../react-native/React/**",
+					"$(SRCROOT)/node_modules/react-native/React/**",
+					"$(SRCROOT)/../../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",
 				);
 				LIBRARY_SEARCH_PATHS = (
@@ -277,7 +279,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
-					"$(SRCROOT)/../node_modules/react-native/React/**",
+					"$(SRCROOT)/../react-native/React/**",
+					"$(SRCROOT)/node_modules/react-native/React/**",
+					"$(SRCROOT)/../../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",
 				);
 				LIBRARY_SEARCH_PATHS = (
