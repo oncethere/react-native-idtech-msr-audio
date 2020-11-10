@@ -4,6 +4,9 @@
   "main": "index.js",
   "author": "Peace Chen",
   "private": true,
+  "homepage": "https://github.com/oncethere/react-native-idtech-msr-audio",
+  "license": "private",
+  "description": "React Native ID TECH MagStripe Reader Integration",
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start"
   },

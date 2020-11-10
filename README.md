@@ -4,38 +4,51 @@ This is a React Native library that wraps the [ID Tech MSR audio](http://www.idt
 
 iOS and Android are supported.
 
-## Installation
+<details>
+<summary><strong>Installation for React Native >= 0.60</strong></summary>
 
-*   `npm install https://github.com/oncethere/react-native-idtech-msr-audio --save`
-*   `react-native link`
+Run
 
-### iOS setup
-*   Add _AVFoundation_, _AudioToolbox_, _MediaPlayer_ frameworks to the project (Build Phases -> Link Binary With Libraries)
-*   Add the `NSMicrophoneUsageDescription` permission to the Info.plist.
+    npm install https://github.com/oncethere/react-native-idtech-msr-audio --save
 
-### Android setup
-*   Check whether `react-native-link` performed the configuration correctly...
-*   Add the necessary permissions to `AndroidManifest.xml` :
-```
-<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
-<uses-permission android:name="android.permission.RECORD_AUDIO"/>
-<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-<uses-permission android:name="android.permission.INTERNET"/>
-```
-Note that for Android M and later, you may need to check for permissions at runtime and prompt the user with the [PermissionsAndroid API](https://facebook.github.io/react-native/docs/permissionsandroid.html).
+Auto-linking is enabled for React Native >= 0.6.0. After installing run
 
-*   Add to `android/settings.gradle` if `react-native link` didn't:
+    (cd ios && pod install)
+
+</details>
+
+<details>
+<summary><strong>Installation for React Native < 0.60</strong></summary>
+
+For older versions of React native:
+
+- `react-native link`
+
+#### iOS setup
+
+- Add _AVFoundation_, _AudioToolbox_, _MediaPlayer_ frameworks to the project (Build Phases -> Link Binary With Libraries)
+
+#### Android setup
+
+Check whether `react-native-link` performed the configuration correctly. If not...
+
+- Add to `android/settings.gradle` if `react-native link` didn't:
+
 ```
 include ':react-native-idtech-msr-audio'
 project(':react-native-idtech-msr-audio').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-idtech-msr-audio/android')
 ```
-*   Add to `android/app/build.gradle` :
+
+- Add to `android/app/build.gradle` :
+
 ```
 dependencies {
   compile project(':react-native-idtech-msr-audio')
 }
 ```
-*   Add to `MainApplication.java` :
+
+- Add to `MainApplication.java` :
+
 ```
   import com.oncethere.idtechmsraudio.IDTechMSRAudioPackage;
   // ...
@@ -58,30 +71,52 @@ dependencies {
   }
 ```
 
-*   The preset XML table fetched by the ID Tech library offers limited device support.  That is not robust enough for production use, so auto config is leveraged instead.  The first time detection will take some time, but subsequent connections use the cached profile which is fast.
+</details>
 
+## Permissions
+
+#### iOS Setup
+
+Add the `NSMicrophoneUsageDescription` permission to the Info.plist.
+
+#### Android Setup
+
+Add the necessary permissions to `AndroidManifest.xml` :
+
+```
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+<uses-permission android:name="android.permission.RECORD_AUDIO"/>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+<uses-permission android:name="android.permission.INTERNET"/>
+```
+
+Note that for Android M and later, you may need to check for permissions at runtime and prompt the user with the [PermissionsAndroid API](https://facebook.github.io/react-native/docs/permissionsandroid.html).
+
+- The preset XML table fetched by the ID Tech library offers limited device support. That is not robust enough for production use, so auto config is leveraged instead. The first time detection will take some time, but subsequent connections use the cached profile which is fast.
 
 ### React Native JS usage
-*   Import the module in a RN app:
-`import IDTECH_MSR_audio from 'react-native-idtech-msr-audio';`
-*   Platform-specific dependencies are listed under the Example section.
+
+- Import the module in a RN app:
+  `import IDTECH_MSR_audio from 'react-native-idtech-msr-audio';`
+- Platform-specific dependencies are listed under the Example section.
 
 ## API
 
 All available methods are promise-based:
 
-*   `activate(readerType, swipeTimeout, logging)` -- Start a connection to the card reader. Parameters:
-    *   _readerType_: UniMag1 = 1, UniMagPro = 2, UniMag2 = 3, Shuttle = 4.
-    *   _swipeTimeout_: Set swipe to timeout after n seconds. 0 waits indefinitely.
-    *   _logging_: (bool) Enables info level NSLogs inside SDK.
-*   `deactivate()` -- End connection to the card reader.
-*   `swipe()` -- Begin listening for a swipe. Register for events to receive the card swipe data.
-
+- `activate(readerType, swipeTimeout, logging)` -- Start a connection to the card reader. Parameters:
+  - _readerType_: UniMag1 = 1, UniMagPro = 2, UniMag2 = 3, Shuttle = 4.
+  - _swipeTimeout_: Set swipe to timeout after n seconds. 0 waits indefinitely.
+  - _logging_: (bool) Enables info level NSLogs inside SDK.
+- `deactivate()` -- End connection to the card reader.
+- `swipe()` -- Begin listening for a swipe. Register for events to receive the card swipe data.
 
 #### Events
+
 Events are emitted by NativeEventEmitter under the name `IdTechUniMagEvent`. Upon a successful swipe, the response type will be `umSwipe_receivedSwipe` and the _data_ key will be populated.
 
 #### Example code snippet
+
 ```Javascript
 import IDTECH_MSR_audio from 'react-native-idtech-msr-audio';
 import { NativeModules, NativeEventEmitter } from 'react-native';
@@ -122,21 +157,24 @@ componentWillUnmount() {
 ```
 
 ## Example
+
 The `MSRExample/` directory has a sample project using the IDTECH_MSR_audio library.
 
-*   Install npm dependencies ```npm install```
-*   Install React Native CLI globally ```sudo npm install -g react-native-cli```
-*   ```react-native link```
+- Install npm dependencies `npm install`
+- Install React Native CLI globally `sudo npm install -g react-native-cli`
+- `react-native link`
 
 #### iOS dependencies
-*   Xcode
-*   Open `MSRExample/ios/MSRExample.xcworkspace` in Xcode.
-*   Build and run on a real iOS device.
 
+- Xcode
+- Open `MSRExample/ios/MSRExample.xcworkspace` in Xcode.
+- Build and run on a real iOS device.
 
 #### Android Dependencies
-*   ...
+
+- ...
 
 ## ToDo
-*   Update MSRExample with Android lib
-*   Tests
+
+- Update MSRExample with Android lib
+- Tests
