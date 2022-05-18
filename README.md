@@ -43,7 +43,7 @@ project(':react-native-idtech-msr-audio').projectDir = new File(rootProject.proj
 
 ```
 dependencies {
-  compile project(':react-native-idtech-msr-audio')
+  implementation project(':react-native-idtech-msr-audio')
 }
 ```
 
