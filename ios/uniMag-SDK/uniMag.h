@@ -1,10 +1,10 @@
-/* Copyright 2010-2016 ID TECH. All rights reserved.
+/* Copyright 2010-2019 ID TECH. All rights reserved.
 */
 
 #import <Foundation/Foundation.h>
 
 //Versioning
-#define UMSDK_VERSION @"7.20"
+#define UMSDK_VERSION @"7.22"
 #define UMSDK_CUSTOMIZATION 0
 
 //Notification identifiers used with NSNotificationCenter
